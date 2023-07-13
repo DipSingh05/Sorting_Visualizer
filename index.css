@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+html,body{
+    height: 100%;
+}
+.parentDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: white;
+}
+.childDiv{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.hourglass{
+    width: 40%;
+    height: 40%;
+}

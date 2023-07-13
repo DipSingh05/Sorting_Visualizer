@@ -1,0 +1,25 @@
+{
+  "name": "sortingvisualizer",
+  "version": "1.0.0",
+  "description": "This is a sorting visualizer website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sorting",
+    "sorting",
+    "visualizer"
+  ],
+  "author": "Diptoman Singh",
+  "license": "ISC",
+  "dependencies": {
+    "app": "^0.1.0",
+    "bootstrap": "^5.3.0-alpha3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.1",
+    "nodemon": "^2.0.22"
+  }
+}
