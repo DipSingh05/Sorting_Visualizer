@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/sort.css">
+</head>
+
+<body>
+
+    <div style="display: flex; justify-content:center;">
+        <nav id="navigation" class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/home">
+                    <img src="/images/sort.png" alt="Logo" width="20" height="20" class="d-inline-block mb-0">
+                    YouSorting</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/public/home.html">Home</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex pe-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="main-container" class="container" style="height: fit-content;">
+        <div class="m-3 text-start">
+            <h2 class="text-decoration-underline" id="sort-title"></h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-3" style="height:100%;">
+            <div class="col">
+                <div class="detailsDiv scrollBar rounded">
+                    <article>
+                        <h3 class="text-decoration-underline">Description:</h3>
+                        <h5 class="m-1 mt-3" id="sort-details"></h5>
+                        <hr>
+                        <h3 class="m-1 mt-3 text-decoration-underline">Steps:</h3>
+                        <h5 class="m-1 mt-4">
+                            <ul id="sort-steps"></ul>
+                        </h5>
+                        <hr>
+                        <h3 class="m-1 mt-3 text-decoration-underline">Time Complexity:</h3>
+                        <h5 class="m-1 mt-3" id="sort-tc"></h5>
+                        <hr>
+                        <h3 class="m-1 mt-3 text-decoration-underline">Time Complexity:</h3>
+                        <h5 class="m-1 mt-3" id="sort-sc"></h5>
+                        <hr>
+                    </article>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container" style="height:100%;">
+                    <div class="row row-cols-1" style="height: 100%;">
+                        <div class="col">
+                            <div class="inputdiv">
+                                <div class="card p-2" style="width: fit-content;">
+                                    <div class="card-body">
+                                        <div class="container text-center">
+                                            <div class="row g-4" style="align-items: center; justify-content:center">
+                                                <div class="col-auto">
+                                                    <div style="width:13rem;">
+                                                        <label for="customRange" class="form-label">Array range
+                                                            <span id="range-value" class="p-2"> </span>
+                                                        </label>
+                                                        <input type="range" min="5" max="15" class="form-range"
+                                                            id="customRange">
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-auto">
+                                                    <div class="form-floating" style="width: 80%;">
+                                                        <input type="number" class="form-control" style="width:max-content;"
+                                                            placeholder="Enter your custom numbers" id="Textarea">
+                                                        <label for="Textarea">Values are within 0 to 100</label>
+                                                    </div>
+                                                </div> -->
+                                                <div class="col-auto">
+                                                    <button id="suffle-btn" class="btn btn-outline-warning rounded"
+                                                        onclick="shuffle()">Shuffle</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sortdiv background" style="height: 22rem">
+                                <div class="card background border rounded" style="width: 100%; height: 100%;">
+                                    <div class="card-body" id="barcontainer">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content:center;">
+                                <button class="btn btn-outline-success m-2 w-25" id="sortBtn" onclick="sorting()">Start
+                                    Sorting</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="margin-bottom: 20px;">
+                <div class="card" style="width: auto; background:linear-gradient(45deg, #f093fb, #f5576c);;">
+                    <div class="card-body">
+                        <h5 class="card-title text-white ">Sorting Codes</h5>
+                        <button name="C++" class="codeBtn btn btn-outline-primary active m-1">C++</button>
+                        <button name="C" class="codeBtn btn btn-outline-primary m-1">C</button>
+                        <button name="Python" class="codeBtn btn btn-outline-primary m-1">Python3</button>
+                        <button name="Java" class="codeBtn btn btn-outline-primary m-1">Java</button>
+                        <button name="JavaScript" class="codeBtn btn btn-outline-primary m-1">Javascript</button>
+                        <br><hr><br>
+                        <div class="scroll rounded" style="padding:30px;width: 100%; background-color:black">
+                            <h5 style="color:palevioletred">
+                                <pre id="codeDiv" class="p-2">
+
+                                </pre>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="margin-bottom: 20px;">
+                <div class="card" style="width: auto; background:linear-gradient(45deg, #f093fb, #f5576c);;">
+                    <div class="card-body">
+                        <h5 class="card-title text-white ">Sorting Codes</h5>
+                        <hr><br>
+                        <div class="scroll2 rounded" style="padding:30px; width: 100%; background-color:black">
+                            <h5 style="color:palevioletred">
+                                <pre id="stepsContainer" class="p-2">
+
+                                </pre>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="/script/sort.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

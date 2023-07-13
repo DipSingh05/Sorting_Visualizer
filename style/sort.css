@@ -1,0 +1,148 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Ubuntu', sans-serif;
+}
+html,body{
+  height: 100%;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  border-width: 8px;
+  border-radius: 8px;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #FE6B8B, #FF8E53);
+}
+@keyframes slow-translation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#navigation{
+  position: fixed;
+  top:0;
+  overflow: hidden;
+  width: 95%;
+  z-index: 10;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 8px;
+  padding: 10px 0px 10px 0px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  animation: slow-translation 2s;
+}
+.offcanvas .btn{
+  width: 100%;
+}
+.offcanvas .btn:hover{
+  background-color: green;
+  margin-left: 3px;
+}
+.inputdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sortdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#suffle-btn:hover{
+  color: white;
+}
+.inputdiv .row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.detailsDiv{
+  padding: 30px 0px 30px 10px;
+  display: flex;
+  justify-content: end;
+}
+.scroll{
+  height: 15rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.scroll2{
+  height: 18.3rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.scrollBar{
+  height: 30rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: black;
+  border: 10px solid black;
+  padding: 30px;
+}
+#descBar{
+  background-color: white;
+  width:100%;
+  height: 20%;
+}
+
+.scrollBar::-webkit-scrollbar {
+  width: 8px;
+  border: 10px solid black;
+  border-radius: 10px;
+}
+
+.scrollBar::-webkit-scrollbar-track {
+  border: 10px solid black;
+  border-radius: 10px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+  border-radius: 5px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #FE6B8B, #FF8E53);
+}
+
+.background{
+  background: linear-gradient(45deg, #FE6B8B, #FF8E53);
+}
+#barcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+#barcontainer div {
+  width: 35px;
+  margin-right: 2px;
+}
+.bar-number {
+  display: block;
+  text-align: center;
+  margin-top: -20px; /* Adjust the margin value based on your design */
+  color: white; /* Set the color of the number */
+}
